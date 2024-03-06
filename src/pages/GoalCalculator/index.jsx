@@ -10,9 +10,8 @@ import PreviousPage from "../../components/PreviousPage";
 import Promo from "../../components/Promo";
 import Quiz from "../../components/Quiz";
 import RightPanelGoal from "../../components/RightPanelGoal";
-import ToolHeader from "../../components/ToolHeader";
-import ToolLinks from "../../components/ToolLinks";
 import Video from "../../components/Video";
+import Slider from "../../components/Slider";
 
 export default function GoalCalculatorPage() {
   return (
@@ -108,28 +107,23 @@ export default function GoalCalculatorPage() {
                 </Text>
               </div>
               <Text size="2xl" as="p" className="!text-gray-900">
-                Goal Calculator
+                Goal Calculator 
               </Text>
-              <Img src="images/img_box.png" alt="boxoneone_one" className="w-full object-cover" />
+              <div className="grid grid-cols-2 self-stretch gap-2"><Slider></Slider>
+              <Slider SliderName="Current Savings" SliderDesc="How much have you already saved up for this goal?"></Slider>
+              <Slider SliderName="Tenure (years)" SliderDesc="How many years later do you wish to acheive this goal?"></Slider>
+              <Slider SliderName="Expected ROI" SliderDesc="What is the expected ROI on your investment?"></Slider>
+              </div>
+              <p className=" pt-2 bg-teal-100 border rounded-md w-full">
+                <h2>You have to invest 4,614/month
+                <img src="" alt="" className=" h-16 w-16"/></h2> 
+                <p className=" text-sm pb-5 border-b solid border-gray-900_02">with an ROI of 10% to reach your goal of 5,00,000 in 3 years.</p>
+                <p className=" pt-2 text-gray-700">If you can not afford this investment, try adjusting your goal plan to see how you can arrive at an affordable result</p>
+              </p>
             </div>
           </div>
           <div className="flex flex-col items-center justify-start w-[24%] mt-6 gap-[7px]">
-            <div className="flex flex-col items-center justify-start w-full gap-2">
-              <RightPanelGoal className="flex flex-col items-center justify-start w-full gap-4 p-[15px] border-teal-600 border border-solid bg-white-A700 rounded-lg" />
-              <div className="h-px w-full bg-gray-900_3f" />
-            </div>
             <Promo className="flex flex-row justify-start w-full gap-2 p-[15px] border-gray-900_3f border border-solid bg-white-A700 rounded-lg" />
-            <div className="flex flex-col items-center justify-start w-full border-gray-900_3f border border-solid bg-white-A700 rounded-lg">
-              <ToolHeader className="flex flex-row justify-between w-full p-[15px] border-gray-900_3f border-b border-solid bg-white-A700" />
-              <div className="flex flex-col w-[90%] gap-px">
-                <ToolLinks className="flex flex-row justify-center w-full py-4 bg-white-A700" />
-                <ToolLinks
-                  toolTitle="Two-Wheeler EMI Calculator"
-                  toolImg="images/img_two_wheeler_loan.png"
-                  className="flex flex-row justify-center w-full py-4 border-gray-900_3f border-t border-solid bg-white-A700"
-                />
-              </div>
-            </div>
             <div className="flex flex-col items-center justify-start w-full border-gray-900_3f border border-solid bg-white-A700 rounded-lg">
               <div className="flex flex-row justify-start w-full p-[15px] border-gray-900_3f border-b border-solid">
                 <Text size="md" as="p" className="!text-gray-900">
